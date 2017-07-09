@@ -1,0 +1,47 @@
+.header {
+	padding: 31px 0 21px 45px;
+	background-color: $color_bg_primary;
+
+	img {
+		display: block;
+	}
+
+	@include breakpoint(mobile) {
+		.wrap {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	@include breakpoint(desktop){
+		position: absolute;
+		background-color: transparent;
+		width: 100%;
+		top: 0;
+		z-index: 1;
+		padding-left: 115px;
+
+		img {
+			width: 165px;
+		}
+	}
+}
+
+.header-title {
+	color: $color_maldini;
+	font-size: 42px;
+	margin-top: 20px;
+	display: block;
+
+	@include breakpoint(mobile) {
+		margin-left: 80px;
+		margin-top: -10px;
+	}
+
+	@include breakpoint(desktop){
+		font-size: 24px;
+		margin-top: 2px;
+		font-weight: 600;
+	}
+}
+

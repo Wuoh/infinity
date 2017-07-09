@@ -1,0 +1,11 @@
+{
+  "name": "MyProject",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

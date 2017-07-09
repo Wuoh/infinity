@@ -1,0 +1,140 @@
+.banner-section {
+	color: $color_maldini;
+
+	.wrap {
+
+		@include breakpoint(desktop) {
+			position: absolute;
+			top: 0;
+			right: 50%;
+			bottom: 0;
+			transform: translateX(50%);
+		}
+	}
+}
+
+.banner-section-img {
+	height: 330px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+
+	@include breakpoint(desktop) {
+		height: 660px;
+	}
+}
+
+
+.banner-section--main {
+	position: relative;
+
+	.banner-section-img {
+		background-image: url('assets/banner-bg-main.jpg');
+
+		@include breakpoint(desktop) {
+			background-image: url('assets/banner-bg-main-large.jpg');
+		}
+	}
+
+	.banner-section-content--primary {
+		background-color: $color_bg_primary;
+	}
+
+
+	.banner-section-content--primary,
+	.banner-section-content--secondary {
+		@include breakpoint(tablet) {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	.banner-section-content--primary {
+		@include breakpoint(desktop) {
+
+			h1 {
+				margin-top: 130px;
+			}
+
+			h4 {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.banner-section-content--secondary {
+		background-color: $color_bg_secondary;
+
+		@include breakpoint(desktop) {
+			width: 310px;
+			position: absolute;
+			right: 0;
+			top: 130px;
+			padding: 25px 27px 0 25px;
+		}
+
+		h1 {
+			@include breakpoint(desktop){
+				font-size: 23px;
+				font-weight: 700;
+				margin: 0;
+			}
+		}
+
+		h3 {
+			@include breakpoint(desktop){
+				font-size: 18px;
+				font-weight: 100;
+				margin-top: 11px;
+			}
+		}
+	}
+}
+
+.banner-section--sub {
+	background-color: $color_dida;
+	position: relative;
+
+	@include breakpoint(desktop) {
+		p,
+		h5 {
+			font-size: 20px;
+		}
+		h2 {
+			margin-top: 80px;
+		}
+	}
+
+	.banner-section-img {
+		background-image: url('assets/banner-bg-sub.jpg');
+
+		@include breakpoint(desktop) {
+			background-image: url('assets/banner-bg-sub-large.jpg');
+
+		}
+	}
+}
+
+
+.banner-section .banner-section-content--primary {
+	@include breakpoint(desktop) {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		height: 100%;
+		background-color: rgba(0,0,0, .5);
+		width: 50%;
+	}
+
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		right: 100%;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0, .5);
+		left: -2000px;
+	}
+}

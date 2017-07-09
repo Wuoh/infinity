@@ -1,0 +1,31 @@
+.circle-btn {
+	display: none;
+	border-radius: 50%;
+	background-color: $color_sacchi;
+	width: 63px;
+	height: 63px;
+	text-align: center;
+	font-size: $body_font_size;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 4;
+	position: absolute;
+	color: $color_inzagi;
+	cursor: pointer;
+	transition: background-color $transition-time;
+
+	&:hover {
+		background-color: darken($color_sacchi, 10%);
+	}
+
+	i {
+		line-height: 63px;
+	}
+
+	@include breakpoint(desktop) {
+		display: block;
+	}
+
+
+}

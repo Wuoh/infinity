@@ -1,0 +1,49 @@
+.form-label {
+	display: flex;
+	align-items: center;
+
+	span {
+		width: 30%;
+		flex-shrink: 0;
+		cursor: pointer;
+
+		@include breakpoint(desktop) {
+		width: 40%;
+	}
+	}
+	input {
+		@include breakpoint(desktop) {
+			padding: 10px;
+		}
+	}
+
+	@include breakpoint(tablet) {
+		font-size: 19px;
+	}
+
+}
+.form-label--check {
+	margin-top: 10px;
+	align-items: flex-start; // overriding form-label above
+
+	input {
+		margin-right: 10px;
+		width: 30px;
+		height: 30px;
+
+		@include breakpoint(desktop) {
+		width: 20px;
+		height: 12px;
+	}
+	}
+
+	span {
+		width: auto; // overriding form-label span above
+		font-size: 25px;
+		flex-shrink: 1; // overriding form-label span above
+
+		@include breakpoint(desktop) {
+		font-size: 11px;
+	}
+	}
+}

@@ -1,0 +1,52 @@
+$color_maldini: #fff; // light
+$color_inzagi: #000; // dark, main text
+$color_gattuso: #f33623; // error, validation
+$color_sacchi: #19c55a; //green
+$color_dida: #49365a; // violet
+$color_abbiati: #352a3f; // dark violet
+$color_collina: #ffc83d; // warning
+$color_orsato: #ffc83d; // warning
+
+$color_bg_primary: #080224;
+$color_bg_secondary: #2e1644;
+
+// #fefefe
+
+$body_font_size: 30px;
+
+// font size
+$mobile: (
+	headline-primary: 52px,
+	headline-secondary: 48px,
+	headline-tertiary: 42px,
+	headline-quaternary: 36px,
+	headline-quinary: 33px,
+	headline-senary: 22px
+);
+
+$tablet: (
+	headline-primary: 30px,
+	headline-secondary: 48px,
+	headline-tertiary: 30px,
+	headline-quaternary: 28px,
+	headline-quinary: 48px,
+	headline-senary: 22px
+);
+
+$desktop: (
+	headline-primary: 45px,
+	headline-secondary: 40px,
+	headline-tertiary: 24px,
+	headline-quaternary: 18px,
+	headline-quinary: 15px,
+	headline-senary: 22px
+);
+
+
+// breakpoints
+$mobile_breakpoint: 720px;
+$tablet_breakpoint: 768px;
+$desktop_breakpoint: 1370px;
+
+
+$transition-time: .3s;

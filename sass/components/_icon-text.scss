@@ -1,0 +1,47 @@
+.icon-text {
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 40px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	span {
+		font-weight: 700;
+	}
+
+	img {
+		margin-bottom: 40px;
+		display: block;
+	}
+
+	& + & {
+		margin-top: 70px;
+	}
+
+	@include breakpoint(desktop) {
+		font-size: 18px;
+
+		& + & {
+			margin: auto 40px 0;
+		}
+
+		img {
+			width: 67px;
+		}
+	}
+
+}
+
+.icons {
+	margin: 65px 0 100px;
+
+	@include breakpoint(desktop) {
+		display: flex;
+		justify-content: center;
+
+
+	}
+}

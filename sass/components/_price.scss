@@ -1,0 +1,126 @@
+@mixin price_triangle {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 0 15px 16px;
+	border-color: transparent transparent transparent $color_sacchi;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@include breakpoint(desktop) {
+		border-width: 16px 15px 0 15px;
+		border-color: $color_sacchi transparent transparent transparent;
+		right: auto;
+		top: calc(100% - 1px);
+		transform: translateY(none);
+		transform: translateX(-50%);
+		left: 50%;
+	}
+}
+
+.price-link {
+	@include breakpoint(desktop) {
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+
+.price-list {
+	list-style: none;
+	padding: 0; // reset defaults
+	margin: 0; // reset defaults
+	color: $color_maldini;
+	line-height: 1;
+	margin-right: 40px;
+
+	@include breakpoint(desktop) {
+		display: flex;
+		margin-right: 0;
+		margin-bottom: 40px;
+		justify-content: center;
+	}
+
+	li {
+		text-align: center;
+		background-color: $color_dida;
+		max-width: 280px;
+
+		padding: 19px 27px;
+		cursor: pointer;
+		position: relative;
+		transition: background-color, transform $transition-time;
+
+		&:nth-child(2n+1) {
+			background-color: $color_abbiati;
+		}
+
+		&:hover,
+		&.active {
+			border-radius: 5px;
+			background-color: $color_sacchi;
+			transform: scale(1.1);
+			z-index: 1;
+
+			&:after {
+				@include price_triangle;
+			}
+		}
+	}
+
+	&:hover li {
+		transform: scale(1);
+		background-color: $color_dida;
+		border-radius: 0;
+
+		&:nth-child(2n+1) {
+			background-color: $color_abbiati;
+		}
+
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			background-color: $color_sacchi;
+			transform: scale(1.1);
+			z-index: 2;
+			border-radius: 5px;
+
+			&:after {
+				@include price_triangle;
+			}
+		}
+	}
+
+	span {
+		font-size: 24px;
+		display: block;
+		font-weight: 300;
+	}
+
+	div {
+		font-size: 72px;
+		font-weight: 700;
+	}
+}
+
+.price {
+	display: flex;
+
+	@include breakpoint(desktop) {
+		flex-direction: column;
+	}
+}
+
+.price-link {
+	text-align: center;
+	padding: 85px 0 45px;
+
+	@include breakpoint(desktop) {
+		text-align: right;
+	}
+}

@@ -1,0 +1,17 @@
+footer {
+	padding: 45px;
+
+	p {
+		font-size: 18px;
+
+		@include breakpoint(desktop) {
+			font-size: 9px;
+		}
+	}
+
+	h5 {
+		display: inline-block;
+		font-size: 14px;
+		margin-right: 20px;
+	}
+}

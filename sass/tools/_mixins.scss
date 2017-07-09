@@ -1,0 +1,50 @@
+@mixin breakpoint($view) {
+  @if $view == mobile {
+    @media (min-width: $mobile_breakpoint) { @content; }
+  }
+
+  @if $view == tablet {
+    @media (min-width: $tablet_breakpoint) { @content; }
+  }
+
+  @else if $view == desktop {
+    @media (min-width: $desktop_breakpoint) { @content; }
+  }
+}
+
+
+@mixin font-size($size) {
+
+	h1 {
+		font-size: map-get($size, headline-primary);
+	}
+
+	h2 {
+		font-size: map-get($size, headline-secondary);
+	}
+
+	h3 {
+		font-size: map-get($size, headline-tertiary);
+	}
+
+	h4 {
+		font-size: map-get($size, headline-quaternary);
+	}
+
+	h5 {
+		font-size: map-get($size, headline-quinary);
+	}
+
+	h6 {
+		font-size: map-get($size, headline-senary);
+	}
+}
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

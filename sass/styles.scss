@@ -1,0 +1,45 @@
+/*!
+ |||||||||    ||||||||||
+ ||||  |||    ||||
+ ||||  |||    ||||  ||||
+ |||||||||    ||||   |||
+ ||||  |||    ||||||||||  |||
+*/
+
+
+@charset "UTF-8";
+
+
+/* Reset
+-------------------------------------------------------------------------- */
+@import "vendors/normalize";
+
+
+/* Variables
+-------------------------------------------------------------------------- */
+@import "settings/variables";
+
+
+/* Mixins
+-------------------------------------------------------------------------- */
+@import "tools/mixins";
+
+
+/* Partials
+-------------------------------------------------------------------------- */
+@import "main/global";
+@import "main/header";
+@import "main/main";
+@import "main/footer";
+
+
+/* Components
+-------------------------------------------------------------------------- */
+@import "components/banner-section";
+@import "components/icon-list";
+@import "components/form";
+@import "components/price";
+@import "components/icon-text";
+@import "components/rectangle";
+@import "components/circle-btn";
+

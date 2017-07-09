@@ -1,0 +1,35 @@
+.icon-list {
+	list-style: none;
+	padding: 0; // reset defaults
+	margin: 0 auto; // reset defaults
+
+	@include breakpoint(desktop) {
+		font-size: 19px;
+		line-height: 30px;
+	}
+
+
+
+	li {
+		display: flex;
+		margin-bottom: 15px;
+		line-height: 46px;
+
+		@include breakpoint(desktop){
+			line-height: 30px;
+		}
+	}
+
+	i {
+		font-size: $body_font_size; // override material icon font size
+		margin-right: 15px;
+		line-height: 46px;
+
+		@include breakpoint(desktop){
+			line-height: 30px;
+		}
+	}
+
+}
+
+

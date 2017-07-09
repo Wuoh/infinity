@@ -1,0 +1,46 @@
+.rectangle {
+	width: 198px;
+	height: 196px;
+	background-color: $color_sacchi;
+	position: absolute;
+	left: 54px;
+	top: 62px;
+
+	h6,
+	p {
+		text-align: center;
+		color: $color_inzagi;
+	}
+
+	h6 {
+		margin: 0px;
+		padding-top: 30px;
+	}
+
+	p {
+		font-size: 61px;
+		margin: 0;
+		padding-top: 10px;
+	}
+
+	@include breakpoint(desktop) {
+		width: 137px;
+		height: 137px;
+		top: 0;
+		left: 50%;
+    	transform: translateX(-50%);
+		z-index: 4;
+
+		p {
+			font-size: 42px;
+		}
+
+
+		h6 {
+			padding-top: 25px;
+			font-size: 15px;
+		}
+	}
+
+
+}
